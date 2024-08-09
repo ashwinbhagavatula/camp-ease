@@ -1,113 +1,82 @@
+import { CampCard } from "@/components/component/camp-card";
+import Hero from "@/components/Hero";
 import Image from "next/image";
-
+import {tick} from "@/utils/svg"
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+    <main className="flex min-h-screen flex-col items-center justify-between bg-background text-primary">
+      <div className="hero w-full">
+      <Hero/>
+      </div>
+      <div className="curve w-full min-h-10 bg-foreground rounded-t-[1000px] "></div>
+      <div className="bg-foreground h-fit md:min-h-screen w-full flex flex-col justify-evenly items-center gap-10">
+        <h2 className="text-3xl md:text-5xl font-bold" >Crowd Favourites</h2>
+        <div className=" flex flex-col md:flex-row  justify-center items-center mx-auto md:gap-10 gap-6 px-4 pb-10">
+        <CampCard />
+        <CampCard />
+        <CampCard />
         </div>
       </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+      <div className="min-h-screen flex flex-col md:flex-row justify-evenly items-center px-4 md:px-12 gap-10 my-24 md:my-0">
+        <div className=" flex flex-col gap-6 text-center md:text-left">
+          <h2 className="text-3xl md:text-5xl font-bold font-sans">Why Choose Our Escapes?</h2>
+          <p className="font-mono text-secondary">Our camp rental options offer a unique and unforgettable experience in some of the most breathtaking natural landscapes. 
+            From cozy cabins by serene lakes to secluded campsites in the mountains, we have something for every adventurer.
+          </p>
+          <ul className="font-mono flex flex-col gap-6">
+            <li>
+              <div className="flex flex-col gap-2">
+                <h4 className="flex gap-4 font-semibold justify-center md:justify-start">{tick} Stunning Locations</h4>
+                <p className="text-secondary">Our camps are situated in some of the most beautiful natural settings, offering unparalleled views and opportunities for exploration.</p>
+              </div>
+            </li>
+            <li>
+              <div className="flex flex-col gap-2">
+                <h4 className="flex gap-4 font-semibold justify-center md:justify-start">{tick} Comfortable Amenities</h4>
+                <p className="text-secondary">Each of our camp sites is equipped with modern amenities to ensure a comfortable and enjoyable stay, from cozy beds to fully-stocked kitchens.</p>
+              </div>
+            </li>
+            <li>
+              <div className="flex flex-col gap-2">
+                <h4 className="flex gap-4 font-semibold justify-center md:justify-start">{tick} Exceptional Service</h4>
+                <p className="text-secondary">Our dedicated team is committed to providing exceptional service and ensuring your camping experience is unforgettable.</p>
+              </div>
+            </li>
+          </ul>
+          <Button variant={"outline"} className="w-28 flex mx-auto md:mx-0">Book Now</Button>
+        </div>
+        <img
+        src="/placeholder.svg"
+        width={600}
+        height={400}
+        alt="Campsite"
+        className="object-cover aspect-[3/2] rounded-t-lg"
         />
       </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
     </main>
+    <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
+      <p className="text-xs text-muted-foreground">&copy; 2024 Camp Ease. All rights reserved.</p>
+      <nav className="sm:ml-auto flex gap-4 sm:gap-6 items-center">
+        <Link href="#" className="text-xs hover:underline underline-offset-4 text-secondary" prefetch={false}>
+          Terms of Service
+        </Link>
+        <Link href="#" className="text-xs hover:underline underline-offset-4 text-secondary" prefetch={false}>
+          Privacy
+        </Link>
+        <Link href="#" className="text-xs hover:underline underline-offset-4 text-secondary" prefetch={false}>
+          <img
+          src="/instagram.png"
+          width={30}
+          height={30}
+          alt="Instagram"
+          />
+        </Link>
+        
+      </nav>
+    </footer>
+  </>
   );
 }
