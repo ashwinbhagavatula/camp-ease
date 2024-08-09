@@ -23,25 +23,25 @@ export default function Home() {
       <div className="min-h-screen flex flex-col md:flex-row justify-evenly items-center px-4 md:px-12 gap-10 my-24 md:my-0">
         <div className=" flex flex-col gap-6 text-center md:text-left">
           <h2 className="text-3xl md:text-5xl font-bold font-sans">Why Choose Our Escapes?</h2>
-          <p className="font-mono text-secondary">Our camp rental options offer a unique and unforgettable experience in some of the most breathtaking natural landscapes. 
+          <p className="font-mono text-secondary text-lg md:text-xl ">Our camp rental options offer a unique and unforgettable experience in some of the most breathtaking natural landscapes. 
             From cozy cabins by serene lakes to secluded campsites in the mountains, we have something for every adventurer.
           </p>
-          <ul className="font-mono flex flex-col gap-6">
+          <ul className="font-mono flex flex-col gap-6 ">
             <li>
               <div className="flex flex-col gap-2">
-                <h4 className="flex gap-4 font-semibold justify-center md:justify-start">{tick} Stunning Locations</h4>
+                <h4 className="flex gap-4 font-semibold justify-center md:justify-start text-lg md:text-xl">{tick} Stunning Locations</h4>
                 <p className="text-secondary">Our camps are situated in some of the most beautiful natural settings, offering unparalleled views and opportunities for exploration.</p>
               </div>
             </li>
             <li>
               <div className="flex flex-col gap-2">
-                <h4 className="flex gap-4 font-semibold justify-center md:justify-start">{tick} Comfortable Amenities</h4>
+                <h4 className="flex gap-4 font-semibold justify-center md:justify-start text-lg md:text-xl">{tick} Comfortable Amenities</h4>
                 <p className="text-secondary">Each of our camp sites is equipped with modern amenities to ensure a comfortable and enjoyable stay, from cozy beds to fully-stocked kitchens.</p>
               </div>
             </li>
             <li>
               <div className="flex flex-col gap-2">
-                <h4 className="flex gap-4 font-semibold justify-center md:justify-start">{tick} Exceptional Service</h4>
+                <h4 className="flex gap-4 font-semibold justify-center md:justify-start text-lg md:text-xl">{tick} Exceptional Service</h4>
                 <p className="text-secondary">Our dedicated team is committed to providing exceptional service and ensuring your camping experience is unforgettable.</p>
               </div>
             </li>
