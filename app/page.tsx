@@ -26,26 +26,6 @@ export default function Home() {
           <p className="font-mono text-secondary text-lg md:text-xl ">Our camp rental options offer a unique and unforgettable experience in some of the most breathtaking natural landscapes. 
             From cozy cabins by serene lakes to secluded campsites in the mountains, we have something for every adventurer.
           </p>
-          <ul className="font-mono flex flex-col gap-6 ">
-            <li>
-              <div className="flex flex-col gap-2">
-                <h4 className="flex gap-4 font-semibold justify-center md:justify-start text-lg md:text-xl">{tick} Stunning Locations</h4>
-                <p className="text-secondary">Our camps are situated in some of the most beautiful natural settings, offering unparalleled views and opportunities for exploration.</p>
-              </div>
-            </li>
-            <li>
-              <div className="flex flex-col gap-2">
-                <h4 className="flex gap-4 font-semibold justify-center md:justify-start text-lg md:text-xl">{tick} Comfortable Amenities</h4>
-                <p className="text-secondary">Each of our camp sites is equipped with modern amenities to ensure a comfortable and enjoyable stay, from cozy beds to fully-stocked kitchens.</p>
-              </div>
-            </li>
-            <li>
-              <div className="flex flex-col gap-2">
-                <h4 className="flex gap-4 font-semibold justify-center md:justify-start text-lg md:text-xl">{tick} Exceptional Service</h4>
-                <p className="text-secondary">Our dedicated team is committed to providing exceptional service and ensuring your camping experience is unforgettable.</p>
-              </div>
-            </li>
-          </ul>
           <Button variant={"outline"} className="w-28 flex mx-auto md:mx-0">Book Now</Button>
         </div>
         <img
@@ -56,6 +36,26 @@ export default function Home() {
         className="object-cover aspect-[3/2] rounded-t-lg"
         />
       </div>
+      <ul className="font-mono flex flex-col md:flex-row gap-6 px-12 mb-24">
+        <li>
+          <div className="flex flex-col gap-2 bg-card p-6 rounded-xl w-96 h-[210px]">
+            <h4 className="flex gap-4 font-semibold justify-center md:justify-start text-lg md:text-xl">{tick} Stunning Locations</h4>
+            <p className="text-secondary">Our camps are situated in some of the most beautiful natural settings, offering unparalleled views and opportunities for exploration.</p>
+          </div>
+        </li>
+        <li>
+          <div className="flex flex-col gap-2 bg-card p-6 rounded-xl w-96 h-[210px]">
+            <h4 className="flex gap-4 font-semibold justify-center md:justify-start text-lg md:text-xl">{tick} Comfortable Amenities</h4>
+            <p className="text-secondary">Each of our camp sites is equipped with modern amenities to ensure a comfortable and enjoyable stay, from cozy beds to fully-stocked kitchens.</p>
+          </div>
+        </li>
+        <li>
+          <div className="flex flex-col gap-2 bg-card p-6 rounded-xl w-96 h-[210px]">
+            <h4 className="flex gap-4 font-semibold justify-center md:justify-start text-lg md:text-xl">{tick} Exceptional Service</h4>
+            <p className="text-secondary">Our dedicated team is committed to providing exceptional service and ensuring your camping experience is unforgettable.</p>
+          </div>
+        </li>
+      </ul>
     </main>
     <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
       <p className="text-xs text-muted-foreground">&copy; 2024 Camp Ease. All rights reserved.</p>
