@@ -4,7 +4,7 @@ import React from 'react'
 
 const Nav = () => {
   return (
-    <div className='flex items-center p-2 md:px-8 justify-between'>
+    <div className='flex items-center p-2 md:px-8 justify-between z-50'>
         <h2 className='font-mono text-2xl text-accent flex gap-4 items-center'>
             <Link href={"/"}>
             <Image
