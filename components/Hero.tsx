@@ -11,11 +11,11 @@ const Hero = () => {
       <SparklesCore
         id="tsparticlesfullpage"
         background="transparent"
-        minSize={0.6}
+        minSize={0.9}
         maxSize={1.4}
-        particleDensity={100}
+        particleDensity={70}
         className="w-full h-full"
-        particleColor="#FFFFFF"
+        particleColor="#efde74"
       />
       </div>
         <h1 className='text-5xl md:text-7xl font-bold'>Bringing the Outdoors to You</h1>
