@@ -4,6 +4,9 @@ import Image from "next/image";
 import {tick} from "@/utils/svg"
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import hyd from "@/images/hyd.jpg"
+import hyd2 from "@/images/hyd2.jpg"
+import desertish from "@/images/desertish.jpg"
 export default function Home() {
   return (
     <>
@@ -15,9 +18,9 @@ export default function Home() {
       <div className="bg-foreground h-fit md:min-h-screen w-full flex flex-col justify-evenly items-center gap-10">
         <h2 className="text-3xl md:text-5xl font-bold" >Crowd Favourites</h2>
         <div className=" flex flex-col md:flex-row  justify-center items-center mx-auto md:gap-10 gap-6 px-4 pb-10">
-        <CampCard />
-        <CampCard />
-        <CampCard />
+        <CampCard imageURL={hyd}/>
+        <CampCard imageURL={desertish}/>
+        <CampCard imageURL={hyd2}/>
         </div>
       </div>
       <div className="min-h-screen flex flex-col md:flex-row justify-evenly items-center px-4 md:px-12 gap-10 my-24 md:my-0">
@@ -28,12 +31,12 @@ export default function Home() {
           </p>
           <Button variant={"outline"} className="w-28 flex mx-auto md:mx-0">Book Now</Button>
         </div>
-        <img
-        src="/placeholder.svg"
+        <Image
+        src="/campfire.jpg"
         width={600}
         height={400}
         alt="Campsite"
-        className="object-cover aspect-[3/2] rounded-t-lg"
+        className="aspect-[3/2] object-cover object-center-bottom rounded-lg"
         />
       </div>
       <ul className="font-mono flex flex-col md:flex-row gap-6 px-12 mb-24">
@@ -67,7 +70,7 @@ export default function Home() {
           Privacy
         </Link>
         <Link href="#" className="text-xs hover:underline underline-offset-4 text-secondary" prefetch={false}>
-          <img
+          <Image
           src="/instagram.png"
           width={30}
           height={30}

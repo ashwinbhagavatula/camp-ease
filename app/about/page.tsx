@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button'
+import Image from 'next/image';
 import React from 'react'
 
 const Page = () => {
@@ -10,19 +11,19 @@ const Page = () => {
                 <h1 className='text-4xl md:text-7xl font-bold'>Explore the Great Outdoors without hassle</h1>
                 <p className='font-mono  text-lg md:text-xl  max-w-3xl text-secondary'>At Camp Ease, we&apos;re on a mission to make camping more accessible and enjoyable for everyone. Founded by two brothers with a deep passion for the outdoors, we&apos;re here to equip you with the gear and knowledge you need to explore the great outdoors.</p>
             </div>
-            <img
-                src="/placeholder.svg"
+            <Image
+                src="/nightcamp.jpg"
                 width={600}
                 height={400}
                 alt="Campsite"
-                className="object-cover aspect-[3/2] rounded-lg"
+                className="object-cover aspect-[3/2] rounded-lg object-center-bottom"
             />
         </div>
       </div>
       <div className="bg-foreground h-fit md:min-h-screen w-full flex flex-col justify-evenly items-center gap-10">
         <div className="min-h-screen flex flex-col md:flex-row justify-evenly items-center px-4 md:px-12 gap-10 my-24 md:my-0">
-            <img
-            src="/placeholder.svg"
+            <Image
+            src="/bros.jpg"
             width={600}
             height={400}
             alt="Campsite"
@@ -49,12 +50,12 @@ const Page = () => {
                     Whether you&apos;re a seasoned camper or a first-time adventurer, our team is here to guide you every step of the way. We&apos;re committed to providing top-notch gear, expert advice, and unforgettable experiences that will leave you feeling refreshed, inspired, and connected to the natural world.
                 </p>   
             </div>
-            <img
-            src="/placeholder.svg"
+            <Image
+            src="/keralacamp.jpg"
             width={600}
             height={400}
             alt="Campsite"
-            className="object-cover aspect-[3/2] rounded-lg flex-1"
+            className="object-cover aspect-[3/2] rounded-lg flex-1 "
             />
         </div>
       </div>

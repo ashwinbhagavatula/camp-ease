@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      objectPosition:{
+        'center-bottom' : '10px -320px'
+      },
       fontFamily: {
         // 👇 Add CSS variables
         sans: ["var(--font-opensans)"],

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
@@ -6,7 +7,7 @@ const Nav = () => {
     <div className='flex items-center p-2 md:px-8 justify-between'>
         <h2 className='font-mono text-2xl text-accent flex gap-4 items-center'>
             <Link href={"/"}>
-            <img
+            <Image
             src="/bonfire.png"
             width={30}
             height={30}

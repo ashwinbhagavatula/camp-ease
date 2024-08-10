@@ -19,12 +19,13 @@ To read more about using these font, please visit the Next.js documentation:
 **/
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 
-export function CampCard() {
+export function CampCard({imageURL, ...props}:any) {
   return (
     <Card className="w-full max-w-md dark:bg-card">
-      <img
-        src="/placeholder.svg"
+      <Image
+        src={imageURL}
         width={600}
         height={400}
         alt="Campsite"
